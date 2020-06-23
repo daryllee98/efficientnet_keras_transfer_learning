@@ -63,7 +63,7 @@ class EfficientDenseKernelInitializer(Initializer):
           an initialization for the variable
         """
         init_range = 1.0 / np.sqrt(shape[1])
-        return tf.random_uniform(shape, -init_range, init_range, dtype=dtype)
+        return tf.random.uniform(shape, -init_range, init_range, dtype=dtype)
 
 
 conv_kernel_initializer = EfficientConv2DKernelInitializer()
